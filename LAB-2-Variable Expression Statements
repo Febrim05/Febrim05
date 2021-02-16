@@ -1,0 +1,54 @@
+print("Latihan 2.1 Menghitung rata-rata dari 3 bilangan bulat sembarang.")
+print("Latihan 2.2 Menghitung nilai fungsi f(x) = 2x**3 + 2x + 15/x , jika x merupakan bilangan bulat sembarang.")
+print("""Latihan 2.3 Budi tertarik untuk melamar pekerjaan pada liburan semester yang akan berlangsung selama 5 minggu.
+Gaji yang diberikan adalah gaji per jam. Total pajak yang harus budi bayarkan dari penghasilannya selama bekerja adalah 14%. 
+Setelah membayar pajak, budi menghabiskan 10% dari pendapatan bersihnya untuk membeli baju dan aksesoris yang akan digunakan pada semester baru, dan 1% untuk membeli alat tulis. 
+Setelah membeli baju, aksesoris dan alat tulis, Budi menggunakan 25% dari sisa uangnya untuk disedekahkan. 
+Setiap Rp.1000 yang Budi sedekahkan 30% nya akan diserahkan kepada anak yatim, dan sisanya akan diserahkan ke kaum dhuafa.""")
+MengerjakanSoal = float(input("Masukkan Nomor yang Ingin dikerjakan(dengan format angka(cth.2.1)):"))
+if(MengerjakanSoal == 2.1):
+    BilanganBulatPertama = int(input("Masukikan Bilangan Bulat Pertama:"))
+    BilanganBulatKedua = int(input("Masukkan Bilangan Bulat Kedua:"))
+    BilanganBulatKetiga = int(input("Masukkan Bilangan Bulat Ketiga:"))
+    Ratarata = float((BilanganBulatPertama*BilanganBulatKedua*BilanganBulatKetiga)/3)
+    print("Rata-rata ketiga bilangan bulat diatas adalah:%.2f" %(Ratarata))
+if(MengerjakanSoal == 2.2):
+    print("f(x) = 2x**3 + 2x + 15/x")
+    NilaiX = int(input("Masukkan nilai x:"))
+    FungsiFX= ((2*NilaiX)**3 +(2*NilaiX)+ (15/NilaiX))
+    print("nilai dari fungsi F(x) diatas adalah:%d" %(FungsiFX))
+if(MengerjakanSoal == 2.3):
+    GajiPerJamBudi = int(input("Masukkan Gaji perjam Budi:Rp."))
+    JamKerjaBudi = int(input("Masukkan Jam Kerja Yang diambil Budi(Dalam seminggu):"))
+    BanyaknyaMinggu = int(input("Masukan Banyak Minggu Yang diambil Budi:"))
+    #Total Gaji Yang Diterima Oleh Budi 
+    TotalGajiBudi = ((GajiPerJamBudi*JamKerjaBudi)*BanyaknyaMinggu)
+    print("Total gaji Yang diterima Budi:Rp.%d" %(TotalGajiBudi))
+    #Tatal pajak yang Harus adibayar Budi
+    TotalPajak = 0.14 * TotalGajiBudi
+    print("Total Pajak Yang Harus dibayar Oleh budi:Rp.%d" %(TotalPajak))
+    #Pendapatan Bersih Budi
+    PendapatanBersih = TotalGajiBudi- TotalPajak
+    print("Pendapatan Bersih Yang diterima Oleh Budi:Rp.%d" %(PendapatanBersih))
+    #Total Pengeluaran Untuk Membeli Baju dan Aksesoris
+    MembeliBajudanAksesoris = 0.1 *PendapatanBersih
+    print("Total pengeluaran untuk membeli baju dan aksesoris:Rp.%d" %(MembeliBajudanAksesoris))
+    SisaUangSetelahMembeliBajudanAksesoris = PendapatanBersih - MembeliBajudanAksesoris
+    print("Sisa Uang Setelah Membeli Baju Dan Aksesoris:Rp.%d" %(SisaUangSetelahMembeliBajudanAksesoris))
+    #Total Pengeluaran Untuk Membeli Alat Tulis
+    MembeliAlatTulis = 0.01 *SisaUangSetelahMembeliBajudanAksesoris
+    print("Total Pengeluaran Untuk Membeli Alata tulis:Rp.%d" %(MembeliAlatTulis))
+    SisaUangSetelahMembeliAlatTulis = SisaUangSetelahMembeliBajudanAksesoris -MembeliAlatTulis
+    print("Sisa uang setelah Membeli alat Tulis:Rp.%d" %(SisaUangSetelahMembeliAlatTulis))
+    #Total Sedehak Yang Diberikan Budi
+    TotalSedekah = 0.25*SisaUangSetelahMembeliAlatTulis
+    print("Total Sedekah Yang Diberikan Budi:Rp.%d" %(TotalSedekah))
+    #Total sedekah Yang diberuikan Kepada Anak Yatim
+    SedekahKepadaAnakYatim = 0.3*TotalSedekah
+    print("Total Sedekah Yang diberikan Kepada Anak Yatim:Rp.%d" %(SedekahKepadaAnakYatim))
+    #Total sedekah Yang Diberikan Kepada Kaum Dhuafa
+    SedekahKepadaKaumDhuafa = TotalSedekah - SedekahKepadaAnakYatim
+    print("Total Sedekah Yang diberikan Kepada Kaum Dhuafa:Rp.%d" %(SedekahKepadaKaumDhuafa))
+    #Sisa Uang yang Dimiliki Budi
+    SisaUangBudiSekarang = SisaUangSetelahMembeliAlatTulis - TotalSedekah
+    print("Sisa Uang Yang Dimiliki Budi sekarang:Rp.%d" %(SisaUangBudiSekarang))
