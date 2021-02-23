@@ -1,0 +1,28 @@
+MasukkkanNilaiTugas = input("Masukkan Nilai Tugas:")
+MasukkanNilaiUTS = input("Masukkan Nilai UTS:")
+MasukkanNilaiUAS = input("Masukkan NIlai UAS")
+try:
+    Tugas = float(MasukkkanNilaiTugas)
+    UTS = float(MasukkanNilaiUTS)
+    UAS = float(MasukkanNilaiUAS)
+    NilaiAkhir = (0.15*Tugas) +(0.35 *UTS) +(0.5 * UAS)
+    if (NilaiAkhir >=85):
+        indeks = "A"
+    elif(NilaiAkhir >=80):
+        indeks = "A-"
+    elif(NilaiAkhir >= 75):
+        indeks = "B+"
+    elif(NilaiAkhir >=70):
+        indeks = "B"
+    elif(NilaiAkhir >= 60):
+        indeks = "C+"
+    elif(NilaiAkhir >= 55):
+        indeks = "C"
+    elif(NilaiAkhir >= 45):
+        indeks = "D"
+    elif(NilaiAkhir >= 0):
+        indeks = "E"
+    print("Nilai Akhir Anda Adalah:%0.2f "%(NilaiAkhir))
+    print("Nilai Indek Anda:",indeks)
+except:
+    print("Anda salah memasukkan inputan Nilai")
