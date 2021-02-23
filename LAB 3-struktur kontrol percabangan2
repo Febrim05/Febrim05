@@ -1,0 +1,3 @@
+MasukkanBilanganm = int(input("Masukkan Bilangan:"))
+Bilangan = ("Bilangan Genap") if MasukkanBilanganm %2 ==0 else ("Bilangan Ganjil")
+print(Bilangan)
