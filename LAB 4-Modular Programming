@@ -1,0 +1,58 @@
+#fungsi penjumlahan
+def penjumlahan(x, y):
+    jumlah = x + y
+    return jumlah
+#fungsi pengurangan
+def pengurangan(x, y):
+    kurang = x - y
+    return kurang
+#fungsi perkalian
+def perkalian(x, y):
+    kali = x * y
+    return kali
+#fungsi pembagian
+def pembagian(x, y):
+    bagi = x / y
+    return bagi
+#fungsi pemangkatan
+def Pemangkatan(x, y):
+    pangkat = x ** y
+    return pangkat
+
+#Menu operasi 
+menu = print("""Pilihan Operator:
+1. Tambah
+2. Kurang
+3. Kali
+4. Bagi
+5. Pangkat  """)
+pilihan = int(input("Masukkan operator yang ingin anda gunakan(1/2/3/4/5):"))
+
+#operasi Perhitungan
+if(pilihan == 1):
+    print("Masukkan Bilangan Yang ingin anda jumlahi")
+    bil1 = int(input("Masukkan Bilangan :"))
+    bil2 = int(input("Ditambah dengan:"))
+    print("Hasil penjumlahan dari kedua bilangan diatas adalah:%d" %(penjumlahan(bil1, bil2)))
+elif(pilihan == 2):
+    print("Masukkan Bilangan Yang ingin anda kurangi")
+    bil3 = int(input("Masukkan Bilangan:"))
+    bil4 = int(input("Dikurang dengan:"))
+    print("Hasil pengurangan dari kedua bilangan diatas adalah:%d" %(pengurangan(bil3, bil4)))
+elif(pilihan == 3):
+    print("Masukkan Bilangan yang ingin anda kalikan")
+    bil5 = int(input("Masukkan Bilangan:"))
+    bil6 = int(input("Dikalikan dengan:"))
+    print("Hasil perkalian dari kedua bilangan diatas adalah:%d" %(perkalian(bil5, bil6)))
+elif(pilihan == 4):
+    print("Masukkan Bilangan yang ingin anda bagikan")
+    bil7 = int(input("Masukkan Bilangan:"))
+    bil8 = int(input("Dibagikan dengan:"))
+    print("Hasil pembagian dari kedua bilangan diatas adalah:%d" %(pembagian(bil7, bil8)))
+elif(pilihan == 5):
+    print("Masukkan Bilangan yang ingin anda pangkatkan")
+    bil9 = int(input("Masukkan Bilangan:"))
+    bil10 = int(input("Dipangkatkan dengan:"))
+    print("Hasil pangkat Dari kedua bilangan diatas ada;lah:%d" %(Pemangkatan(bil9, bil10)))
+else:
+    print("Pilihan Inxailid")
