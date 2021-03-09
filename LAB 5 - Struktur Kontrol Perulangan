@@ -1,0 +1,67 @@
+"""Mas Bimo merupakan pedagang Mie Ayam. pelanggan yang datang pun terbilang cukup ramai,  
+dikarenakan cuaca belakangan ini yang kurang baik, 
+warung yang merupakan tempat jualan Mas Bimo Mengalami kerusakan yang cukup parah, 
+Mas Bimo berencana Memperbaiki warungnya dari Hasil Keuntungan penjualannya.
+
+Input:
+1. Meminta inpuutan Target
+2. Harga penjualan Mie ayam / porsi
+3. Modal dalam menjual mie ayam/porsi
+4. minimal penjualan dalam sehari
+5. maksimal penjaulan dalam sehari
+Proses:
+1. minimal keuntungan dalam sehari
+2. maksimal keuntungan dalam sehari
+3. lama penjualan yang dibutuhkan mas bimo
+4. banyaknya mangkuk ang di jual
+Output:
+1. Keuntungan yang diterima mas bimo
+2. banyak mangkuk yang harus dijual
+3. lama waktu yang dibutuhkan 
+
+"""
+Target = int(input("Masukkan Biaya yang dibutuhkan untuk memperbaiki warung: Rp."))
+Harga = int(input("Masukkan harga Mie Ayam/porsi: Rp."))
+Modal = int(input("Masukkan Modal untuk setiap porsi: Rp."))
+minimPenjualan = int(input("Minimal penjualan dalam sehari:"))
+MAXPenjualan = int(input("Maksimal Penjualan dalam sehari:"))
+
+#Mencarai untung minimal dalam sehari
+UntungMinim = ((Harga * minimPenjualan) - (Modal * minimPenjualan))
+
+#mencari untung maksimal dalam sehari
+UntungMax = ((Harga * MAXPenjualan) - (Modal *MAXPenjualan))
+
+#Mencarai minimal Banyaknya Mangkuk yang harus dijual mas bimo
+minimMangkuk = UntungMax
+mangkuk = 0
+while(minimMangkuk <= Target):
+    minimMangkuk = minimMangkuk + UntungMax
+    mangkuk = mangkuk + MAXPenjualan
+
+#Mencari maksimal banyaknya mangkuk yang harus dijual
+maxmangkuk =UntungMinim
+mangkuk1 = 0
+while (maxmangkuk <= Target):
+    maxmangkuk = maxmangkuk + UntungMinim
+    mangkuk1 = mangkuk1 + minimPenjualan
+
+#Mencari minimal hari ang dibutuhkan
+minimHari = UntungMax
+Hari = 0
+while(minimHari <= Target):
+    minimHari = minimHari + UntungMax
+    Hari = Hari + 1
+
+#Mencari minimal hari ang dibutuhkan
+maxHari = UntungMinim
+Hari1 = 0
+while(maxHari <= Target):
+    maxHari = maxHari + UntungMax
+    Hari1 = Hari1 + 1
+
+print("Keuntungan yang didapat oleh Mas Bimo dalam sehari adalah: Rp.%d" %(UntungMinim),"Sampai ", "Rp.%d" %(UntungMax))
+print("Banyak Mangkuk yang harus dijual oleh mas bimo adalah:%d" %(mangkuk) + " Mangkuk" , "Sampai ", "%d" %(mangkuk1) + " Mangkuk")
+print("Banyak hari yang dibutuhkan mas bimo untuk mencapai target: %d" %(Hari) + " Hari", "Sampai ", "%d" %(Hari1) + " Hari")
+
+
