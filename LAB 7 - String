@@ -1,0 +1,73 @@
+# Soal:
+''' Bimo merupakan Mahasiswa Informatika, Bimo ingin mengerjakan tugas Pratikum Alpronya. 
+dari pembelajaran Pratikum Alpro Minggu lalu, bimo ingin membuat program untuk menghitung banyaknya 
+huruf vocal pada sebuah string/kalimat dan mengubah semua huruf vocal tersebut menjadi huruf Vocal terbanyak.
+dikarenakan ketidakmampuan bimo dalam membuat program , bimo meminta tolong untuk  membuatkan 
+program seperti yang bimo inginkan.'''
+
+#Input:
+#1. menginputkan kalimat yang ingin dihitung dan diubah huruf vocalnya 
+
+#Proses:
+#1. Menghitung banyaknya huruf Vocal
+#2. Mengubah semua Huruf Vocal ke huruf Vocal terbannyak
+
+#Output:
+#1. Banyaknya Huruf Vocal
+#2. Hasi Konversi ke huruf Vocal Terbannyak
+
+#Menghitung Bnyaknnya Huruf Vocal Pada Kalimat 
+Kalimat = input("Masukkan Kalimat: ")
+lowercase = Kalimat.lower()
+for vocal in "aiueo":
+    jumlah = lowercase.count(vocal)
+    if(vocal == "a"):
+        a = jumlah 
+    elif(vocal == "i"):
+        i = jumlah
+    elif(vocal == "u"):
+        u = jumlah 
+    elif(vocal == "e"):
+        e = jumlah 
+    elif(vocal == "o"):
+        o = jumlah
+print("Bannyaknnya huruf vocal adalah: ")
+print("a=%d" %(a))
+print("i=%d" %(i))
+print("u=%d" %(u))
+print("e=%d" %(e))
+print("o=%d" %(o))
+
+#Mengubah Semua huruf Vocal ke huruf Vocal Terbanyak
+Listvocal =[a,i,u,e,o]
+Nilaimax = max(Listvocal)
+if(Nilaimax == Listvocal[0]):
+    A = lowercase.replace("i","a")
+    A1 = A.replace("u","a")
+    A2 = A1.replace("e","a")
+    A3 = A2.replace("o","a")
+    print(A3)
+elif(Nilaimax == Listvocal[1]):
+    I = lowercase.replace("a","i")
+    I1 = I.replace("u","i")
+    I2 = I1.replace("e","i")
+    I3 = I2.replace("o","i")
+    print(I3)
+elif(Nilaimax == Listvocal[2]):
+    U = lowercase.replace("a","u")
+    U1 = U.replace("i","u")
+    U2 = U1.replace("e","u")
+    U3 = U2.replace("o","u")
+    print(U3)
+elif(Nilaimax == Listvocal[3]):
+    E = lowercase.replace("a","e")
+    E1 = E.replace("i","e")
+    E2 = E1.replace("u","e")
+    E3 = E2.replace("o","e")
+    print(E3)
+elif(Nilaimax == Listvocal[4]):
+    O = lowercase.replace("a","o")
+    O1 = O.replace("i","o")
+    O2 = O1.replace("u","o")
+    O3 = O2.replace("e","o")
+    print(O3)
