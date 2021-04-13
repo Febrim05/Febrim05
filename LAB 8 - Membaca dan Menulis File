@@ -1,0 +1,58 @@
+#71200612 Frebimo Kurniawan Zebouth Mbeo
+""" 
+*Soal:
+Bimo Merupakan Mahasiswa Informatika, dikarenakan mendapat tugas pembuatan Video Pratikum Alpro Mengenai
+Membaca dan Menulis File. Bimo ingin membuat program untuk Menulis data Teman-temannya dalam bentuk(.txt) 
+dan setelah itu ditampilkan kembali menggunakan python. dikarenakan ketidak mampuan bimo dalam membuat 
+program, bimo meminta tolong kepada kalian untuk membantunya untuk membuatkan program seperti pada kasus diatas. 
+
+Input:
+1. User Memasukan Lokasi penyimpana file yang aka di tulis
+2. User memasukkian banyaknya  teman yang ingin didata
+3. meminta user memasukkan data-data dari setiap temannya
+
+Proses:
+1. Lokasi penyimpana file yang akan di tulis
+2. program untuk user memasukkan data" temannya
+3. menggunakan perulangan untuk menampilkan untuk inputan user
+4. membuat program membaca/ mengakses dan menampikan kembali file yang sudah di tulis
+
+Output:
+1. Menghasilkan  data File .txt beriki data teman" yang dudah dimasukkan tadi
+2. Menampilkan kembali file yang sudah di tulis di teminal python"""
+
+#Menulis File
+Tulis = open('D:\\Data teman saya.txt','w')
+Pendataan = Tulis.write("==========Data-Data Teman Saya==========\n")
+batas = int(input("Masukkan Banyaknya teman yang ingin ada datakan: "))
+for Teman in range(1,batas+1):
+    NamaTeman = input("Masukkan Nama Teman Anda: ")
+    TTLTeman = input("Masukkan Tempat/tanggal lahir Teman Anda: ")
+    UmurTeman = input("Masukkan Umur Teman Anda: ")
+    LokasiTeman = input("Masukkan Lokasi Teman Anda Sekarang: ")
+    print("Apa status Teman Anda?Mahasiswa/Murid/Pekerja/Berkeluarga/Lainnya")
+    StatusTeman = input("Masukkan Status Teman Anda: ")
+    print("")
+    for data in range(0,1):
+        Nama = Tulis.write(str(NamaTeman)+ " -> Nama Teman Anda\n")
+        TTL = Tulis.write(str(TTLTeman)+ " -> Tempat/tanggal lahir  Teman Anda\n")
+        Umur = Tulis.write(str(UmurTeman)+ " -> Umur Teman Anda\n")
+        Lokasi = Tulis.write(str(LokasiTeman)+ " -> Lokasi Teman Anda\n")
+        Status = Tulis.write(str(StatusTeman)+ " -> Status Teman Anda\n")
+        spasi = Tulis.write("\n")
+Tulis.close()
+
+#Membaca File
+Baca = open('D:\\Data teman saya.txt')
+hasil = Baca.read()
+print(hasil)
+
+handle = open('D:\\Data teman Saya.txt')
+c = 0
+for line in handle:
+    if line.find(" -> Nama Teman Anda") !=-1:
+        c += 1
+        print("Nama teman Anda terdapat di: " + line.strip())
+print("Banaknya Kata Nama Teman Anda: ",c)
+
+
