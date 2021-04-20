@@ -1,0 +1,54 @@
+'''
+*Soal:
+Bimo Merupakan Mahasiswa Informatika, dikarenakan mendapat tugas pembuatan Video Pratikum Alpro Mengenai
+list. Bimo ingin membuat program menampilkan data-data nilai akhir Teman-temannya yang diambil dari inputan 
+user dan dimasukkan ke dalam sebuah list dan setelah itu ditampilkan kembali menggunakan python. 
+dikarenakan ketidak mampuan bimo dalam membuat program, bimo meminta tolong kepada kalian untuk membantunya 
+untuk membuatkan program seperti pada kasus diatas. 
+
+*Input:
+Memasukkan Data-Data teman teman berupa Nama,Nim dan Nilai-nilai(Nilai UTS, Nilai Tugas dan Nilai UAS)yang dibutuhkan
+
+output:
+informasi berupa nilai-nilai yang sdh dimasukkan tadi dan nilai akhirnya juga.'''
+
+
+#Membuat List
+ListNama = []
+ListNim = []
+ListTugas = []
+ListUts = []
+ListUas = []
+ListNilaiAkhir = []
+stop = False
+
+while (not stop):
+    Nama = input("NAMA\t\t: ")
+    ListNama1 = ListNama.append(Nama)
+    Nim = input("NIM\t\t: ")
+    ListNim1 = ListNim.append(Nim)
+    Tugas = int(input("Nilai Tugas\t: "))
+    ListTugas1 = ListTugas.append(Tugas)
+    Uts = int(input("Nilai UTS\t: "))
+    ListUts1 = ListUts.append(Uts)
+    Uas = int(input("Nilai UAS\t: "))
+    ListUas1 = ListUas.append(Uas)
+
+    data = input("Tambahkan Data? (y/t): ")
+    if (data == "t"):
+        stop = True
+    NilaiAkhir = (Tugas + Uts + Uas)//3
+    ListNilaiAkhir1 = ListNilaiAkhir.append(NilaiAkhir)
+
+def pemetaanList(ListNama, ListNim, ListTugas, ListUts, ListUas, ListNilaiAkhir):
+    print("""
+=============================================================================================
+|     NAMA      |     NIM       |     TUGAS     |     UTS     |     UAS     |     AKHIR     |
+=============================================================================================""")
+    for i in range(0,len(ListNama)):
+        print("|    ",ListNama[i], "     |   ",ListNim[i], "  |     ",ListTugas[i], "      |     ",ListUts[i], "    |     ", ListUas[i], "     |     ",ListNilaiAkhir[i], "     |")
+pemetaanList(ListNama,ListNim,ListTugas,ListUts,ListUas,ListNilaiAkhir)
+
+
+
+
