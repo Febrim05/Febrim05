@@ -1,0 +1,44 @@
+#71200612_Febrimo Kurniawan Zebouth Mbeo
+''' 
+soal :
+    Bimo mendapat tugas dalam pendataan barang-barang sumbangan untuk korban bencana
+    di NTT, dikarenakan barang yang perlu didata sangat banyak, bimo meminta kamu
+    membantunya membuatkan program dalam memudahkan pendataan barang" tersebut.
+    Bantulah Bimo dalam Membuatkan Program seperti pada kasus diatas.
+
+input:
+    * Inputan User Berupa Data" sumbangan
+    
+Proses:
+    * Membuat Perulangan Untuk Memasukkan Data Sumbangan
+    * Membuat List untuk Menampung Semua Barang" yang dimasukkan
+    * Mengurutkan Barang" tersebut
+    * Membuat Perulangan Untuk Menghitung Barang" tersebut
+
+Output:
+    * Menampilkan Daftar Dictionary dari barang"
+    * Menambilkan jenis dan jumlah barang dalam bentuk Dictionary'''
+
+#Membuat List/ tampungan data
+ListBarang =[]
+stop = False
+#Membuat Perulangan untuk Inputan User
+while (not stop):
+    print("=================================")
+    barang = input("Nama Barang: ")
+    ListBarang1 = ListBarang.append(barang)
+    print("=================================")
+
+    data = input("Tambahkan data? (y/t): ")
+    if (data == "t"):
+        stop = True
+
+#Membuat Pengurutan Barang dalam list
+DaftarBarang1 = ListBarang.sort()
+
+#Membuat Perhitungan Banyaknya Barang Yang sudah Dimasukkan
+DaftarBarang1 = dict()
+for i in range(len(ListBarang)):
+    DaftarBarang1[ListBarang[i]] = ListBarang.count(ListBarang[i])
+print(ListBarang)
+print(DaftarBarang1)
