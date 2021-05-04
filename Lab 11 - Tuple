@@ -1,0 +1,43 @@
+""" Dalam Rangka Menyambut Tahun Ajaran yang baru, Gerry sebagai ketua kelas diminta 
+mendatakan  hobi teman-teman kelasnya untuk sebagai pertimbangan dalam membentuk 
+Kegiatan Extrakulikuler, Dikarenakan kamu sedikit mengerti tentang program, Gerry meminta
+tolong kepada kamu untuk membantunya membuatkan souce code dengan tujuan membantunya 
+dalam pendataan tersebut. bantulah Gerry membuatkan program seperti kasus diatas.
+
+# Input:
+1. Meminta User Memasukkan Banyaknya Murid yang ingin di datakan.
+2. Inputan berupa hobi Teman-teman kelas Gerry
+
+# Proses:
+1. Membuat Perulangan untuk inputan user
+2. Membuat list kosong dengan maksud untuk menapung data" yang dimasukkan
+3. Membuat Perulangan untuk menghitung tiap karakter/hobi yang sudah didatakan
+
+# Output:
+1. Jenis-jenis hobi yang sudah didatakan
+2. Hasil perhitungan untuk setiap hobi yang sudah didatakan.
+3. Total Hobi tiap murid"""
+
+BanyaknyaData = int(input("Banyaknya Murid yang ingin didata: "))
+list_Hobi = []
+
+#Membuat Perulangan untuk Inputan Hobi dari user
+for i in range(BanyaknyaData):
+    inputan = input("Masukkan Hobi: ")
+    inputan1 = list_Hobi.append(inputan)
+
+#Membuat perulangan untuk mengitung banyaknya hobi per anggota
+sort = set(sorted(list_Hobi))
+hobi = tuple(sort)
+print("Jenis-jenis hobi yang didata: ",hobi)
+#Membuat perula
+Total = 0
+for i in sort:
+    hitung = list_Hobi.count(i)
+    print("Murid yang memiliki Hobi", i , "Sejumlah",hitung )
+    Total += hitung
+print("Banyaknya Hobi yang sudah didata: ", Total)
+
+
+
+
