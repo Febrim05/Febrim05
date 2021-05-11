@@ -1,0 +1,64 @@
+#71200612_Febrimo Kurniawan Zebouth Mbeo
+""" 
+Soal:
+    Dalam memperingati hari kemerdekaan indonesia pada tanggal 17 Agustus, biasanya sekolah
+akan mengadakan lomba-lomba yang akan dimainkan. abraham sebagai ketua osis diberi tugas
+oleh bapak/ibu guru untuk menentukan 3 lomba apa saja yang akan dimainkan dari usulan 
+murid-murid lainnya. dikarenakan murid yang di sekolah sangat banyak, abraham 
+meminta tolong kamu untuk membantunya membuatkan program pendataan usulan" trsebut
+dan menentukan 3  usulan lomba terbanyak yang akan dimainkan saat 17 Agustus nantinya.
+Bantulah Abraham seperti kasus diatas.
+
+Input:
+    1. Meminta Inputan User berupa Usulan" lomba yang akan dimainkan
+
+proses:
+    1. Membuat list dan set untuk menampung semua inputan
+    2. Membuat Perulangan Intuk inputan User
+    3. Membuat Perulangan untuk Menenampilkan kembali daftar lomba yang sudah didata
+    4. Membuat perulangan untuk mengitung banyak lomba/anggota pada list
+    5. Membuat perulangan untuk menentukan 3 lomba yang akan dimainkan dari daftar lomba
+    
+Output:
+    1. Daftar Lomba Yang sudah di datakan 
+    2. Hasil perhitungan Lomba dari setiap usulan
+    3. 3 permainan yang akan dimainkan pada saat 17 Agustus. """
+
+#Membuat Tampilan awal
+print("==========Program pemilihan Lomba==========")
+#Membuat list dan set kosong
+Set_KelasGabungan = set()
+List_KelasGabungan = []
+List_Lomba = []
+List_TotalPerhitungan = []
+#Membuat perulangan untuk inputan user
+BanyakKelas = int(input("Banyaknya kelas: "))
+for kelas in range(1,BanyakKelas+1):
+    print("Kelas ke",kelas)
+    BanyakMurid = int(input("Banyaknya Murid di dalam kelas: "))
+    for murid in range(1,BanyakMurid+1):
+        print("Usulan Murid ke",murid,":",end="")
+        inputan = input("")
+        Set_KelasGabungan1 = Set_KelasGabungan.add(inputan)
+        List_KelasGabungan1 = List_KelasGabungan.append(inputan)
+#Menampilkan daftar lomba yang sudah di data
+print("\n===============Daftar Lomba================")
+for daftar in Set_KelasGabungan:
+    print("=> ",daftar)
+#Menghitung Anggota pada list
+print("\n=============Menampilkan Hasil=============")
+for i in Set_KelasGabungan:
+    hitung = List_KelasGabungan.count(i)
+    print("Usulan Lomba", i ,"Sebanyak: ",hitung, "orang" )
+    List_Lomba1 = List_Lomba.append(i)
+    List_TotalPerhitungan1 = List_TotalPerhitungan.append(hitung)
+#Menentukan 3 lomba yang akan dimainkan
+print("\n=========Lomba Yang Akan Dimainkan=========")
+for i in range(1,4):
+    Max = max(List_TotalPerhitungan)
+    Nilai_coba = List_TotalPerhitungan.index(Max)
+    Nilai_coba1 = List_Lomba[Nilai_coba]
+    print("> Lomba yang akan dimainkan ke",i,":",Nilai_coba1)
+    Hapus_lomba = List_Lomba.remove(Nilai_coba1)
+    Hapus_Max = List_TotalPerhitungan.remove(Max)
+
