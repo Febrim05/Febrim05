@@ -1,0 +1,88 @@
+#71200612_Febrimo Kurniawan Zebouth Mbeo
+""" Soal :
+    kamu merupakan Mahasiswa informatika yang sedikit mengerti bahasa pemograman python,
+di sabtu malam dini hari, kamu melihat adik kamu ang kelas 5 SD sedang mengerjakan tugas 
+perhitungan  yang diberikan oleh Bapak/Ibu di sekolah. saat kamu memperhatikan adikkamu, 
+kamu melihat bahwa adik kamu mengalami kesusahan mengerjakan soal-soalnya. 
+dikarenakan rasa kasihan kamu terhadap adik kamu, Kamu memiliki ide untuk membuatkan 
+program kakulator sederhana untk membatu adikmu mengerjakan tugasnya 
+
+input:
+1. pilihan operasi yang ingin dikerjakan.
+2. inputan bilangan yang akan di peroses
+
+Proses:
+1. Membuatkan fungsi operasi kakulator
+2. Menentukan Kondisi yang akan di proses sesuai dengan inputan user 
+
+Output:
+1. Hasil operasi yang ingin dikerjakan"""
+
+
+def Penjumlahan(x, y):
+    if y == 0:
+        return x
+    else:
+        return x + y
+
+def Pengurangan(x ,y):
+    if y == 0:
+        return x
+    else:
+        return x - y
+
+def Perkalian(x, y):
+    if x == 0:
+        return 0
+    if y == 0:
+        return 0
+    else:
+        return x * y
+
+def Pembagian(x, y):
+    if x == 0:
+        return 0
+    if y == 0:
+        return 0
+    else:
+        return x / y
+
+def Pemangkatan(x, y):
+    if y == 0:
+        return 1
+    else:
+        return x * Pemangkatan(x,y-1)
+
+def Faktorial(x):
+    if x <= 1:
+        return 1
+    else:
+        return x * Faktorial(x-1) 
+
+print(""" Operasi Kakulator:
+1. Penjumlahan
+2. Pengurangan
+3. Perkalian
+4. Pembagian
+5. Pemangkatan
+6. Faktorial""")
+
+pilihan = int(input("Masukkan Pilihan operasi yang ingin anda kerjakan(1/2/3/4/5/6): "))
+Angka1 = int(input("Masukkan Bilangan:"))
+if pilihan == 1:
+    Tambah = int(input("Ditambah dengan: "))
+    print("Hasil Operasi", Angka1, "+", Tambah, "=",Penjumlahan(Angka1,Tambah) )
+elif pilihan == 2:
+    Kurang = int(input("Dikurang dengan: "))
+    print("Hasil Operasi", Angka1, "-", Kurang, "=",Pengurangan(Angka1,Kurang))
+elif pilihan == 3:
+    Kali = int(input("Dikali dengan: "))
+    print("Hasil Operasi", Angka1, "*", Kali, "=",Perkalian(Angka1,Kali))
+elif pilihan == 4:
+    Bagi = int(input("Dibagi dengan: "))
+    print("Hasil Operasi", Angka1, "/", Bagi, "=",Pembagian(Angka1,Bagi))
+elif pilihan == 5:
+    Pangkat = int(input("Dipangkatkan dengan: "))
+    print("Hasil Operasi", Angka1, "^", Pangkat, "=",Pemangkatan(Angka1,Pangkat))
+elif pilihan == 6:
+    print("Hasil Operasi ",Angka1,"!",  "adalah", Faktorial(Angka1))
